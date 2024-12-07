@@ -14,7 +14,7 @@ document.getElementById('signup').addEventListener('click', function() {
       .then(response => {
         if (response.status === 200) {
           alert('Signup successful for ' + username);
-          window.location.href = '/chat.html'; // Redirect to chat page
+          window.location.href = 'chat.html'; // Redirect to chat page
         } else {
           alert('Signup failed');
         }

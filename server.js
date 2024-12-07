@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// Serve static files
+// Serve static files from the public directory
 app.use(express.static('public'));
 
 // Handle signup request
@@ -20,7 +20,7 @@ app.post('/signup', (req, res) => {
   }
 });
 
-// Start server
+// Start the server
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
