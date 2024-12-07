@@ -3,9 +3,26 @@ document.getElementById('signup').addEventListener('click', function() {
     const password = document.getElementById('signup-password').value;
   
     if (username && password) {
-      // Replace with your actual signup logic, e.g., sending data to the server
-      console.log('Sign up with username:', username, 'and password:', password);
-      alert(`Signup successful for ${username}`);
+      // Simulate an API call to the server
+      fetch('/signup', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ username, password })
+      })
+      .then(response => {
+        if (response.status === 200) {
+          alert('Signup successful for ' + username);
+          window.location.href = '/chat.html'; // Redirect to chat page
+        } else {
+          alert('Signup failed');
+        }
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        alert('An error occurred during signup');
+      });
     } else {
       alert('Please fill out all fields.');
     }
