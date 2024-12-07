@@ -1,34 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Chat App</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Chat Application</title>
 </head>
 <body>
-    <div id="signup-container">
-        <input id="signup-username" type="text" placeholder="Choose a username...">
-        <input id="signup-password" type="password" placeholder="Choose a password...">
-        <button id="signup">Sign Up</button>
-    </div>
-    <div id="login-container" style="display:none;">
-        <input id="login-username" type="text" placeholder="Enter your username...">
-        <input id="login-password" type="password" placeholder="Enter your password...">
-        <button id="login">Login</button>
-    </div>
-    <div id="chat-container" style="display:none;">
-        <div id="admin-controls" style="display:none;">
-            <button id="kick-all">Kick All Users</button>
-        </div>
-        <div id="chat-window">
-            <div id="output"></div>
-            <div id="feedback"></div>
-        </div>
-        <input id="message" type="text" placeholder="Type a message...">
-        <button id="send">Send</button>
-    </div>
-    <script src="/socket.io/socket.io.js"></script>
-    <script src="script.js"></script>
+  <div id="signup-container">
+    <input type="text" id="signup-username" placeholder="Username">
+    <input type="password" id="signup-password" placeholder="Password">
+    <button id="signup">Sign Up</button>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
